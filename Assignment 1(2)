@@ -1,0 +1,5 @@
+
+j=input("enter the first name")
+k=input("enter the last name")
+m=j+k
+print("hello",m,"welcome to pyhton")
