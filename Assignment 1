@@ -1,0 +1,10 @@
+a=int(input("Enter the number->>"))
+b=int(input("enter the number->>"))
+c=a+b
+d=a-b
+e=a*b
+f=a/2
+print("Addition:",c)
+print("subtraction:",d)
+print("Multiplication:",e)
+print("Division:",f)
