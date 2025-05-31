@@ -1,0 +1,22 @@
+from math import *
+a=int(input("enter the option for\n1 square\n2 log\n3radian"))
+
+print(" ")
+if(a==1):
+    b=int(input("enter for squarenumber1->>"))
+    c=int(input("enter for squarenumber2->>"))
+    print("the sqaure value",pow(b,c))
+    
+elif(a==2):
+    g=int(input("enter the number for log->"))
+    if(g>0):
+        print("the log value",log(g))
+    else:
+        print("error")
+elif(a==3):
+    k=int(input("Enter the radian->>"))
+    print("the radian value->>",radians(k))
+else:
+    print("please try again correctly!!!")
+    
+    
