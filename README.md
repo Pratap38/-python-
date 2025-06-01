@@ -6,3 +6,6 @@ Assigment 2 and 3
 for even odd
 factorial
 maths function
+Assignment 4->
+        @ to read an txt file line by line
+        @ to append read and display an file as user input
