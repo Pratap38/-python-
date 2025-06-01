@@ -1,0 +1,7 @@
+a={"Mohan":12,"Ram":34,"shyam":23}
+b=input("Enter the name")
+if b in a:
+    print("found",a[b])
+
+else:
+    print("not found")
