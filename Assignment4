@@ -1,0 +1,4 @@
+z=open("sample.txt",'r')
+for i in z:
+    print(i.lstrip())
+z.close()
