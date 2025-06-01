@@ -1,0 +1,16 @@
+a = open("output.txt", 'w')
+b = input("Enter the text: ")
+a.write(b)
+print("Text added successfully.")
+a.close()
+
+with open("output.txt", 'a+') as n:
+    m = input("Enter the text: ")
+    k = n.writelines("\n" + m)
+    print("Text added successfully appended.")
+print(k)
+n.close()
+
+with open("output.txt", 'r') as a:
+    print("\nContent of the file:")
+    print(a.read())
