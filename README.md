@@ -9,3 +9,6 @@ maths function
 Assignment 4->
         @ to read an txt file line by line
         @ to append read and display an file as user input
+Assignment 5->
+        @ to extract values form key
+        @ to reverse and first 5 number through slicing
