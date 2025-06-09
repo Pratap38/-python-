@@ -1,0 +1,118 @@
+from tkinter import *
+
+window = Tk()
+window.geometry("500x400")
+window.title("Calculator")
+window.config(bg="#2C3E50")
+
+windw = Label(window, text="Calculator", bg="#2C3E50", fg="#E74C3C", font=("Arial", 20, "bold"))
+windw.place(x=5, y=5)
+
+entry = Entry(window, width=40, bg="#34495E", fg="white", font=("Arial", 15, "bold"))
+entry.place(x=5, y=50)
+
+def click(num):
+    result = entry.get()
+    entry.delete(0, END)
+    entry.insert(END, str(result) + str(num))
+
+def DOTBOX():
+    result = entry.get()
+    if "." not in result:
+        entry.insert(END, ".")
+
+button_colors = {"bg": "#2980B9", "fg": "white", "activebackground": "#3498DB", "activeforeground": "white"}
+b = Button(window, text="1", width=10, **button_colors, command=lambda: click(1))
+b.place(x=10, y=100)
+b = Button(window, text="2", width=10, **button_colors, command=lambda: click(2))
+b.place(x=140, y=100)
+b = Button(window, text="3", width=9, **button_colors, command=lambda: click(3))
+b.place(x=270, y=100)
+b = Button(window, text="4", width=10, **button_colors, command=lambda: click(4))
+b.place(x=10, y=160)
+b = Button(window, text="5", width=10, **button_colors, command=lambda: click(5))
+b.place(x=140, y=160)
+b = Button(window, text="6", width=9, **button_colors, command=lambda: click(6))
+b.place(x=270, y=160)
+b = Button(window, text="7", width=10, **button_colors, command=lambda: click(7))
+b.place(x=10, y=220)
+b = Button(window, text="8", width=10, **button_colors, command=lambda: click(8))
+b.place(x=140, y=220)
+b = Button(window, text="9", width=9, **button_colors, command=lambda: click(9))
+b.place(x=270, y=220)
+b = Button(window, text="0", width=10, bg="#16A085", fg="white", activebackground="#1ABC9C", activeforeground="white", command=lambda: click(0))
+b.place(x=140, y=280)
+
+def equal():
+    n2 = entry.get()
+    entry.delete(0, END)
+    if math == "addition":
+        entry.insert(0, i + float(n2))
+    elif math == "subtraction":
+        entry.insert(0, i - float(n2))
+    elif math == "multiplication":
+        entry.insert(0, i * float(n2))
+    elif math == "division":
+        entry.insert(0, i / float(n2))
+
+b = Button(window, text="=", width=10, bg="#E74C3C", fg="white", activebackground="#C0392B", activeforeground="white", command=equal)
+b.place(x=10, y=280)
+
+operator_colors = {"bg": "#8E44AD", "fg": "white", "activebackground": "#9B59B6", "activeforeground": "white"}
+def add():
+    a1 = entry.get()
+    global math
+    math = "addition"
+    global i
+    i = float(a1)
+    entry.delete(0, END)
+
+b = Button(window, text="+", width=9, **operator_colors, command=add)
+b.place(x=390, y=100)
+
+def sub():
+    a1 = entry.get()
+    global math
+    math = "subtraction"
+    global i
+    i = float(a1)
+    entry.delete(0, END)
+
+b = Button(window, text="-", width=9, **operator_colors, command=sub)
+b.place(x=390, y=160)
+
+def multi():
+    a1 = entry.get()
+    global math
+    math = "multiplication"
+    global i
+    i = float(a1)
+    entry.delete(0, END)
+
+b = Button(window, text="*", width=9, **operator_colors, command=multi)
+b.place(x=390, y=220)
+
+def divide():
+    a1 = entry.get()
+    global math
+    math = "division"
+    global i
+    i = float(a1)
+    entry.delete(0, END)
+
+b = Button(window, text="/", width=9, **operator_colors, command=divide)
+b.place(x=390, y=280)
+
+def clear():
+    entry.delete(0, END)
+
+b = Button(window, text="C", width=9, bg="#E74C3C", fg="white", activebackground="#C0392B", activeforeground="white", command=clear)
+b.place(x=270, y=280)
+
+b = Button(window, text=".", width=9, bg="black", fg="white", activebackground="black", activeforeground="white", command=DOTBOX)
+b.place(x=10, y=340)
+
+b= Button(window, text="Exit", width=9, bg="#E74C3C", fg="white", activebackground="#C0392B", activeforeground="white", command=window.quit)
+b.place(x=390, y=340)
+
+window.mainloop()
