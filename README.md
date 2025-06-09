@@ -12,3 +12,5 @@ Assignment 4->
 Assignment 5->
         @ to extract values form key
         @ to reverse and first 5 number through slicing
+Asingment 6->>
+        @ to make an calculator using gui
